@@ -1,10 +1,10 @@
-import rirty from '../lib'
+import { ritry } from '../src'
 
 test('should be run until successful', async () => {
   const mock = jest.fn()
   let count = 1
 
-  const result = await rirty(() => {
+  const result = await ritry(() => {
     mock()
 
     return new Promise<string>((resolve, reject) => {
@@ -24,12 +24,12 @@ test('should be run until successful', async () => {
 
 test('should be throw exception', async () => {
   const mock = jest.fn(() => Promise.reject(new Error('fail')))
-  await expect(rirty(mock, { retry: 4 })).rejects.toThrow('fail')
+  await expect(ritry(mock, { retry: 4 })).rejects.toThrow('fail')
   expect(mock).toBeCalledTimes(4)
 })
 
 test('should be run once by default', async () => {
   const mock = jest.fn(() => Promise.reject(new Error('fail')))
-  await expect(rirty(mock)).rejects.toThrow('fail')
+  await expect(ritry(mock)).rejects.toThrow('fail')
   expect(mock).toBeCalledTimes(1)
 })

@@ -1,7 +1,7 @@
 type Callback<T> = () => Promise<T>
 type Options = { retry?: number }
 
-export default function ritry<T>(callback: Callback<T>, options: Options = {}): Promise<T> {
+export function ritry<T>(callback: Callback<T>, options: Options = {}): Promise<T> {
   const mergedOpts = { retry: 1, ...options }
 
   if (mergedOpts.retry < 1) {
