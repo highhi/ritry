@@ -35,3 +35,7 @@ export declare function ritry<T>(callback: Callback<T>, options?: Options): Prom
 ### retry
 `default: 1`  
 You can change the number of retries
+
+
+## License
+MIT
