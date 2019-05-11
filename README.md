@@ -1,5 +1,4 @@
 # ritry
-[![CircleCI](https://circleci.com/gh/highhi/ritry.svg?style=svg)](https://circleci.com/gh/highhi/ritry)
 
 ## Install
 ```
