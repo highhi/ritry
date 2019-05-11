@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": "highhi/ritry",
   "homepage": "https://github.com/highhi/ritry",
-  "types": "dist/index.d.ts",
+  "types": "lib/index.d.ts",
   "keywords": [
     "promise",
     "retry",
