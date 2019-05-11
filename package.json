@@ -1,7 +1,7 @@
 {
   "name": "ritry",
   "version": "0.0.2",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "author": "highhi",
   "license": "MIT",
   "repository": "highhi/ritry",
