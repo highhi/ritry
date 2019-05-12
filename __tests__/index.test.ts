@@ -25,11 +25,11 @@ test('should be run until successful', async () => {
 test('should be throw exception', async () => {
   const mock = jest.fn(() => Promise.reject(new Error('fail')))
   await expect(ritry(mock, { retry: 4 })).rejects.toThrow('fail')
-  expect(mock).toBeCalledTimes(4)
+  expect(mock).toBeCalledTimes(5)
 })
 
 test('should be run once by default', async () => {
   const mock = jest.fn(() => Promise.reject(new Error('fail')))
   await expect(ritry(mock)).rejects.toThrow('fail')
-  expect(mock).toBeCalledTimes(1)
+  expect(mock).toBeCalledTimes(2)
 })
