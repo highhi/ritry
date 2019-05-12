@@ -9,7 +9,7 @@ export async function ritry<T>(callback: Callback<T>, options: Options = {}): Pr
   }
 
   let result: T = undefined as any
-  let count = 1
+  let count = 0
 
   for (; count <= mergedOpts.retry; count++) {
     try {
