@@ -34,7 +34,7 @@ test('should be run once by default', async () => {
   expect(mock).toBeCalledTimes(2)
 })
 
-test('should be able to get the number of retries', async () => {
+test('should be able to get the retry count', async () => {
   const numbers1: number[] = []
   const numbers2: number[] = []
 
