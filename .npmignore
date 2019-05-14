@@ -1,6 +1,6 @@
 src/
 __tests__/
 .circleci/
-.eslint
+.eslintrc
 tsconfig.json
 jest.config.js
