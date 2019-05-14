@@ -1,6 +1,6 @@
 {
   "name": "ritry",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "author": "highhi",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "build": "tsc",
     "prepublish": "npm run --if-present build",
     "test": "jest",
-    "lint": "eslint --fix ./lib/**/*.ts"
+    "lint": "eslint --fix ./src/**/*.ts"
   },
   "devDependencies": {
     "@types/jest": "^24.0.12",

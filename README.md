@@ -17,10 +17,28 @@ function promiseFunction() {
   })
 }
 
-ritry(() => promiseFunction(), { retry: 4 }).catch((err) => {
-  console.error(err.message)
+ritry(promiseFunction, { retry: 4 }).catch((err) => {
+  console.error(err)
 })
 ```
+
+you can gradually increase the duration.
+
+``` javascript
+import { ritry } from 'ritry'
+
+function promiseFunction({ retryCount }) {
+  const duration = 1000 + retryCount * 200
+  return new Promise((_, reject) => {
+    setTimeout(() => reject(new Error('fail')), duration)
+  })
+}
+
+ritry(promiseFunction, { retry: 4 }).catch((err) => {
+  console.error(err)
+})
+```
+
 ```
 declare type Callback<T> = () => Promise<T>;
 declare type Options = {
