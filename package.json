@@ -17,7 +17,7 @@
     "build": "tsc",
     "prepublish": "npm run --if-present build",
     "test": "jest",
-    "lint": "eslint --fix ./lib/**/*.ts"
+    "lint": "eslint --fix ./src/**/*.ts"
   },
   "devDependencies": {
     "@types/jest": "^24.0.12",
